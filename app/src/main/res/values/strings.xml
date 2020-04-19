@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Vehicle-Tracker</string>
+    <string name="log_in">Log In</string>
+
+    <string name="firstnameerr">Enter your Full Name</string>
+    <string name="lastnameerr">Enter your Username</string>
+    <string name="emailerr">Enter Correct Email</string>
+    <string name="passworderr">Enter Password</string>
+    <string name="cpassworderr">Password do not match</string>
 </resources>
