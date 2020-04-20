@@ -97,16 +97,15 @@
     <View
         android:layout_width="2dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="76dp"
         android:background="#83C2F4"
         app:layout_constraintBottom_toTopOf="@+id/etEmail2"
         app:layout_constraintEnd_toStartOf="@+id/etUsername2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtNumri2"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber2"
         app:layout_constraintTop_toBottomOf="@+id/etName2" />
 
     <TextView
-        android:id="@+id/txtNumri2"
+        android:id="@+id/txtNumber2"
         android:layout_width="51dp"
         android:layout_height="35dp"
         android:text="+ 383"

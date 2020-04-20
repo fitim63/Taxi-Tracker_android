@@ -34,16 +34,16 @@
     <View
         android:layout_width="2dp"
         android:layout_height="38dp"
-        android:background="#2E96E8"
+        android:background="#83C2F4"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toStartOf="@+id/etUsername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtNumri2"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber2"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <TextView
-        android:id="@+id/txtNumri2"
+        android:id="@+id/txtNumber2"
         android:layout_width="51dp"
         android:layout_height="35dp"
         android:text="+ 383"
@@ -97,7 +97,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <TextView
-        android:id="@+id/txtPytja"
+        android:id="@+id/txtQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account?"
@@ -117,7 +117,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toEndOf="@+id/txtPytja"
+        app:layout_constraintStart_toEndOf="@+id/txtQuestion"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.055" />
 

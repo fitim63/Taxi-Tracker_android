@@ -31,7 +31,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         awesomeValidation =  new AwesomeValidation(ValidationStyle.BASIC);
         etFullname = (EditText)findViewById(R.id.etName2);
-        etFullname = (EditText)findViewById(R.id.etUsername2);
+        etUsername = (EditText)findViewById(R.id.etUsername2);
         etEmail = (EditText)findViewById(R.id.etEmail2);
         etPassword = (EditText)findViewById(R.id.etPassword2);
         etConfirmPassword = (EditText)findViewById(R.id.etConfirmPassword2);
