@@ -17,6 +17,44 @@
         app:layout_constraintVertical_bias="0.209"
         app:srcCompat="@drawable/logo4" />
 
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="247dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="38dp"
+        android:background="#2E96E8"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toStartOf="@+id/etUsername"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtNumri2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <TextView
+        android:id="@+id/txtNumri2"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:text="+ 383"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toStartOf="@+id/etUsername"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.746" />
+
     <TextView
         android:id="@+id/txtFPas"
         android:layout_width="wrap_content"
@@ -43,19 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.231" />
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="311dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.105" />
-
+    
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="311dp"

@@ -1,4 +1,4 @@
-package com.ubt.project_01_android.activities;
+package com.ubt.project_01_android.model;
 
 public class User {
     String name, username, email, password;

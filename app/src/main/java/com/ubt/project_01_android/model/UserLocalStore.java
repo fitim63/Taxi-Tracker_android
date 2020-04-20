@@ -1,11 +1,13 @@
-package com.ubt.project_01_android.activities;
+package com.ubt.project_01_android.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.ubt.project_01_android.model.User;
+
 public class UserLocalStore {
     public static final String SP_NAME = "userDetails";
-    SharedPreferences userLocalDatabase; //qikjo mundeson me kriju nje databaze lokale ne telefon
+    SharedPreferences userLocalDatabase;
 
     public UserLocalStore (Context context){
         userLocalDatabase = context.getSharedPreferences(SP_NAME, 0);

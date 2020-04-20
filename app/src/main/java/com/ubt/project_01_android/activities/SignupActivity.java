@@ -21,9 +21,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     EditText etPassword;
     EditText etConfirmPassword;
     Button btnSignUp;
-
     AwesomeValidation awesomeValidation;
-
     TextView mTextViewRegister;
 
     @Override
@@ -32,7 +30,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_signup);
 
         awesomeValidation =  new AwesomeValidation(ValidationStyle.BASIC);
-
         etFullname = (EditText)findViewById(R.id.etName2);
         etFullname = (EditText)findViewById(R.id.etUsername2);
         etEmail = (EditText)findViewById(R.id.etEmail2);
@@ -41,7 +38,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         btnSignUp = (Button)findViewById(R.id.btnSignUp);
 
           awesomeValidation.addValidation(SignupActivity.this,R.id.etName2,"[a-zA-Z\\s]+",R.string.firstnameerr);
-          awesomeValidation.addValidation(SignupActivity.this,R.id.etUsername2,"(\\+383[0-9]*)",R.string.lastnameerr); //Nese ka shkronja "(\\+383[a-zA-Z]*)"
+          awesomeValidation.addValidation(SignupActivity.this,R.id.etUsername2,"(?=.*[\\d]).{8}",R.string.lastnameerr); //Nese ka shkronja "(\\+383[a-zA-Z]*)"
           awesomeValidation.addValidation(SignupActivity.this,R.id.etEmail2,android.util.Patterns.EMAIL_ADDRESS,R.string.emailerr);
           awesomeValidation.addValidation(SignupActivity.this,R.id.etPassword2, "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d]).{8,}",R.string.passworderr);
           awesomeValidation.addValidation(SignupActivity.this,R.id.etConfirmPassword2,R.id.etPassword2,R.string.cpassworderr);
@@ -65,17 +62,5 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         } else{
             Toast.makeText(SignupActivity.this, "Error", Toast.LENGTH_SHORT).show();
         }
-
-        /*switch (v.getId()){
-            case R.id.btnSignUp:
-                String name = etFullname.getText().toString();
-                String username = etUsername.getText().toString();
-                String email = etEmail.getText().toString();
-                String password = etPassword.getText().toString();
-
-                User user = new User(name, username, email, password);
-
-                break;
-        }*/
     }
 }
