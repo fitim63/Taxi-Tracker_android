@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
         awesomeValidation.addValidation(LoginActivity.this,R.id.etUsername,"(\\+383[0-9]*)",R.string.lastnameerr); //Nese ka shkronja "(\\+383[a-zA-Z]*)"
-        awesomeValidation.addValidation(LoginActivity.this,R.id.etPassword, "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d])(?=.*[~`!@#\\$%\\^&\\*\\(\\)\\-_\\+=\\{\\}\\[\\]\\|\\;:\"<>,./\\?]).{8,}",R.string.passworderr);
+        awesomeValidation.addValidation(LoginActivity.this,R.id.etPassword, "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d]).{8,}",R.string.passworderr);
 
         btnLogin.setOnClickListener(this);
 

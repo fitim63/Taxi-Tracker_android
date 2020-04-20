@@ -2,10 +2,12 @@ package com.ubt.project_01_android.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
@@ -21,6 +23,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     Button btnSignUp;
 
     AwesomeValidation awesomeValidation;
+
+    TextView mTextViewRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +43,19 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
           awesomeValidation.addValidation(SignupActivity.this,R.id.etName2,"[a-zA-Z\\s]+",R.string.firstnameerr);
           awesomeValidation.addValidation(SignupActivity.this,R.id.etUsername2,"(\\+383[0-9]*)",R.string.lastnameerr); //Nese ka shkronja "(\\+383[a-zA-Z]*)"
           awesomeValidation.addValidation(SignupActivity.this,R.id.etEmail2,android.util.Patterns.EMAIL_ADDRESS,R.string.emailerr);
-          awesomeValidation.addValidation(SignupActivity.this,R.id.etPassword2, "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d])(?=.*[~`!@#\\$%\\^&\\*\\(\\)\\-_\\+=\\{\\}\\[\\]\\|\\;:\"<>,./\\?]).{8,}",R.string.passworderr);
+          awesomeValidation.addValidation(SignupActivity.this,R.id.etPassword2, "(?=.*[a-z])(?=.*[A-Z])(?=.*[\\d]).{8,}",R.string.passworderr);
           awesomeValidation.addValidation(SignupActivity.this,R.id.etConfirmPassword2,R.id.etPassword2,R.string.cpassworderr);
 
         btnSignUp.setOnClickListener(this);
+
+        mTextViewRegister = (TextView)findViewById(R.id.txtLogin2);
+        mTextViewRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent loginIntent = new Intent( SignupActivity.this,LoginActivity.class);
+                startActivity(loginIntent);
+            }
+        });
     }
 
     @Override
