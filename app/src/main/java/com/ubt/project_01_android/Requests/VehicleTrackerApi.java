@@ -29,6 +29,6 @@ public interface VehicleTrackerApi {
     @POST("/login")
     Call<LoginResponse> login(@Body LoginRequest loginRequest);
 
-    @POST("/drivers/createDriver")
+    @POST("/createDriver")
     Call<RegisterRequest> register(@Body RegisterRequest registerRequest);
 }

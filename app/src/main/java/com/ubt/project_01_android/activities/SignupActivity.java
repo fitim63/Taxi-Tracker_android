@@ -35,7 +35,7 @@ public class SignupActivity extends AppCompatActivity  {
     Button btnSignUp;
     Button btnBackToLogin;
     AwesomeValidation awesomeValidation;
-
+    final int[] responseCode = new int[1];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,12 +76,17 @@ public class SignupActivity extends AppCompatActivity  {
                             etAge.getText().toString(),
                             etPhoneNumber.getText().toString(),
                             etPassword.getText().toString());
-
+                    Toast.makeText(SignupActivity.this, "Thank you for filling out your information!", Toast.LENGTH_LONG).show();
+                    Intent signUpIntent = new Intent(SignupActivity.this, LoginActivity.class);
+                    startActivity(signUpIntent);
                 } else {
                     Toast.makeText(SignupActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
+
     }
 
     public void register(String firstName, String lastName, String age, String phoneNumber, String password) {
@@ -96,21 +101,20 @@ public class SignupActivity extends AppCompatActivity  {
                     .build();
             VehicleTrackerApi vehicleTrackerApi = retrofit.create(VehicleTrackerApi.class);
             Call<RegisterRequest> registerCall = vehicleTrackerApi.register(new RegisterRequest(firstName, lastName, phoneNumber, password, age));
-
             registerCall.enqueue(new Callback<RegisterRequest>() {
                 @Override
                 public void onResponse(Call<RegisterRequest> call, Response<RegisterRequest> response) {
-                            Toast.makeText(SignupActivity.this, "Thank you for filling out your information!", Toast.LENGTH_LONG).show();
-                            Intent signUpIntent = new Intent(SignupActivity.this, LoginActivity.class);
-                            startActivity(signUpIntent);
+                    responseCode[0] = response.code();
+
                 }
                 @Override
                 public void onFailure(Call<RegisterRequest> call, Throwable t) {
 
                 }
             });
-        }
 
+
+        }
 
     }
 }
