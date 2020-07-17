@@ -53,7 +53,9 @@ dependencies {
 
     // optional - GCMNetworkManager support
     implementation "androidx.work:work-gcm:$work_version"
-
     // optional - Test helpers
     androidTestImplementation "androidx.work:work-testing:$work_version"
+
+    // spinner
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
 }

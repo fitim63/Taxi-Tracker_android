@@ -2,96 +2,153 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/vt_background"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="263dp"
-        android:layout_height="96dp"
-        android:src="@drawable/logo4"
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/vehicle_tracker_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.008"
+        app:srcCompat="@drawable/vehicle_tracker_logo" />
 
     <EditText
-        android:id="@+id/etUsername2"
+        android:id="@+id/etFirstName"
         android:layout_width="311dp"
         android:layout_height="38dp"
+        android:background="@drawable/edit_text_shape"
         android:ems="10"
-        android:hint="Username"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="311dp"
+        android:layout_height="38dp"
+        android:background="@drawable/edit_text_shape"
+        android:ems="10"
+        android:hint="Last name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="311dp"
+        android:background="@drawable/edit_text_shape"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="Phone Number"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName2"
+        app:layout_constraintTop_toBottomOf="@+id/etAge"
         app:layout_constraintVertical_bias="0.067" />
 
-    <EditText
-        android:id="@+id/etName2"
-        android:layout_width="311dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:hint="Full Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.101" />
 
     <EditText
-        android:id="@+id/etEmail2"
+        android:id="@+id/etAge"
         android:layout_width="311dp"
         android:layout_height="38dp"
+        android:background="@drawable/edit_text_shape"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Age"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername2"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintTop_toBottomOf="@+id/etLastName"
+        app:layout_constraintVertical_bias="0.054" />
 
     <EditText
         android:id="@+id/etPassword2"
         android:layout_width="311dp"
         android:layout_height="38dp"
+        android:background="@drawable/edit_text_shape"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail2"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber"
+        app:layout_constraintVertical_bias="0.101" />
 
     <EditText
         android:id="@+id/etConfirmPassword2"
         android:layout_width="311dp"
         android:layout_height="38dp"
+        android:background="@drawable/edit_text_shape"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword2"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.111" />
 
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="322dp"
-        android:layout_height="49dp"
-        android:background="#83C2F4"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:text="Sign Up"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword2"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.297" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Back to login"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintVertical_bias="0.542" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
